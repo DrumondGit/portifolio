@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drumond</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="header">
+                <div class="title">
+                    <img style="width: 100px;" src="/images/Drumond.png" alt="" class="enlarge-image">
+                </div>
+                <div class="nav">
+                    <!-- <button class="menu-button"><i class="fas fa-bars"></i> Menu</button> -->
+                    <ul>
+                        <li class="enlarge-image" onclick="irParaSecao()">Sobre mim</li>
+                        <li class="enlarge-image" onclick="irParaSecao2()">Trabalhos recentes</li>
+                        <li class="enlarge-image" onclick="irParaSecao3()">Habilidades</li>
+                        <li class="enlarge-image" onclick="irParaSecao5()">Contato</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </header>
+        <main>
+            <div class="bg-1">
+                <div class="imagens">
+                    <div class="titulo">
+                        <h1 class="dev"></h1>
+                    </div>
+                    <div class="eu">
+                        <img src="/images/eu.png" alt="" id="floating-image">
+                    </div>
+  
+                </div>
+                <hr class="vem">
+
+                <div class="aboutMe">
+                    <div class="sobreMim">
+                        <img src="/images/sobreMim.png" alt="" class="sobreMimImg">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sapiente totam consequatur
+                            libero
+                            corporis quas.
+                            Minima dolores temporibus sint, magni perspiciatis cupiditate, possimus ea quod, vitae
+                            molestias
+                            itaque ducimus
+                            culpa?
+                            Reiciendis pariatur dolor hic rem, mollitia ea officiis ex molestias ad obcaecati. Doloribus
+                            veritatis id nam rem
+                            sapiente corporis? Nulla voluptates sunt ex labore ducimus! Asperiores voluptatum veniam
+                            iusto
+                            doloribus.</p>
+
+                    </div>
+                    <div class="teste">
+                        <img src="/images/person2.png" alt="" id="floating-image" class="personSobre">
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="bg-2">
+                <div class="recentWorks">
+                    <img src="/images/recent.png" alt="" id="floating-image" class="imgRecent">
+                </div>
+                <div class="imgs">
+                    <img src="/images/frame1.png" alt="" class="enlarge-image" id="openModal2" onclick="modal2()">
+                    <img src="/images/frame2.png" alt="" class="enlarge-image" id="openModal3" onclick="modal3()">
+                    <img src="/images/emBreve.png" alt="" class="enlarge-image">
+                </div>
+
+                <div class="imgs" id="escondido">
+                    <img src="/images/emBreve.png" alt="" class="enlarge-image">
+                    <img src="/images/emBreve.png" alt="" class="enlarge-image">
+                    <img src="/images/emBreve.png" alt="" class="enlarge-image">
+                </div>
+                <div class="botaoVermais">
+                    <input type="button" value="Ver mais" id="verMais" onclick="aparece()">
+                </div>
+
+            </div>
+
+            <div class="bg-3">
+                <div class="conhecimentos">
+                    <h1 id="floating-image" class="hTitle">Habilidades</h1>
+                </div>
+                <div class="skills">
+                    <div class="icons">
+                        <div class="iconsFront">
+                            <img src="/images/html.png" alt="" onmouseenter="html()" class="enlarge-image">
+                            <img src="/images/css.png" alt="" onmouseenter="css()" class="enlarge-image">
+                            <img src="/images/js.png" alt="" onmouseenter="js()" class="enlarge-image">
+
+                        </div>
+                        <div class="iconsBack">
+                            <img src="/images/c.png" alt="" onmouseenter="c()" class="enlarge-image">
+                            <img src="/images/c++.png" alt="" onmouseenter="cplus()" class="enlarge-image">
+                            <img src="/images/javaAA.png" alt="" onmouseenter="java()" class="enlarge-image">
+                        </div>
+                    </div>
+                    <div class="textSkills">
+                        <p style="font-size: 20px;">Passe o mouse por cima das imagens para visualizar as informações!
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+            
+
+            <footer>
+                <div class="contatos">
+                    <h1 class="hTitle" id="floating-image">Contatos</h1>
+                </div>
+                <div class="imgsFooter">
+                    <img src="/images/Home.png" alt="" class="enlarge-image" onclick="irParaSecao1()">
+                    <img src="/images/sobreMimB.png" alt="" class="enlarge-image" onclick="irParaSecao()">
+                    <img src="/images/Contato.png" alt="" class="enlarge-image" id="openModal">
+                </div>
+                <div class="rodape">
+                    <p class="by" id="floating-image">By Guilherme Drumond Silva</p>
+                </div>
+                
+            </footer>
+
+            <!-- Modal Contato -->
+
+            <div id="fade" class="hide"></div>
+            <div id="modal" class="hide">
+                <div class="modalHeader">
+                    <button id="closeModal" class="Button">
+                    </button>
+                </div>
+                <div id="modalBody">
+                </div>
+            </div>
+
+            <!-- Fim modal Contato -->
+
+
+            <!-- Modal trabalhos -->
+
+
+            <!-- Fim modal trabalhos -->
+
+
+        </main>
+
+    </div>
+
+    
+
+
+
+    <script src="/node_modules/typed.js/lib/typed.js"></script>
+    <script>
+        var typed = new Typed('.dev', {
+            strings: [
+            "Desenvolvedor<br><strong class='trocaCor'>Front-end</strong>",
+            "Desenvolvedor<br><strong class='trocaCor'>Back-end</strong>",
+            "Desenvolvedor<br><strong class='trocaCor'>Full Stack</strong>"
+        ],
+            typeSpeed: 60,
+            backSpeed:60,
+            loop:true
+        });
+    </script>
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>
